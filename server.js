@@ -9,6 +9,6 @@ app.use(express.static(path.join(__dirname, '/app/public')));
 app.use(require("./app/routing/htmlRoutes.js"));
 app.use(require("./app/routing/apiRoutes.js"));
 
-app.listen(8080, function(){
+app.listen(process.env.PORT || 5000, function(){
   console.log("Listening");
 });
